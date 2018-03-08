@@ -12,6 +12,7 @@ import { PagesComponent } from './pages/pages.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
+import { CardapioComponent } from './pages/cardapio/cardapio.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { LoginComponent } from './pages/login/login.component';
     PagesComponent,
     NotFoundComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    CardapioComponent
   ],
   imports:      [
     BrowserModule,
