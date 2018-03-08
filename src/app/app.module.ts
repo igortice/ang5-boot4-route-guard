@@ -11,6 +11,7 @@ import { LayoutMainComponent } from './layout/layout-main/layout-main.component'
 import { PagesComponent } from './pages/pages.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HomeComponent } from './pages/home/home.component';
     LayoutMainComponent,
     PagesComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports:      [
     BrowserModule,
