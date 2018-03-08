@@ -9,9 +9,8 @@ import { LayoutNavbarComponent } from './layout/layout-navbar/layout-navbar.comp
 import { LayoutDashboardComponent } from './layout/layout-dashboard/layout-dashboard.component';
 import { LayoutMainComponent } from './layout/layout-main/layout-main.component';
 import { PagesComponent } from './pages/pages.component';
-import { PageHomeComponent } from './pages/page-home/page-home.component';
-import { PageHomeIndexComponent } from './pages/page-home/page-home-index/page-home-index.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -22,9 +21,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     LayoutDashboardComponent,
     LayoutMainComponent,
     PagesComponent,
-    PageHomeComponent,
-    PageHomeIndexComponent,
-    PageNotFoundComponent
+    NotFoundComponent,
+    HomeComponent
   ],
   imports:      [
     BrowserModule,
