@@ -1,4 +1,12 @@
-import { CardapioComponent, CardapioNewComponent, HomeComponent, LoginComponent, NotFoundComponent, PagesComponent } from './pages';
+import {
+  CardapioComponent,
+  CardapioListComponent,
+  CardapioNewComponent,
+  HomeComponent,
+  LoginComponent,
+  NotFoundComponent,
+  PagesComponent
+} from './pages';
 import { Routes } from '@angular/router';
 
 export const ROUTES: Routes = [
@@ -9,7 +17,8 @@ export const ROUTES: Routes = [
     path:      'cardapios',
     component: CardapioComponent,
     children:  [
-      { path: 'new', component: CardapioNewComponent, outlet: 'modal' }
+      { path: '', component: CardapioListComponent },
+      { path: 'new', component: CardapioNewComponent }
     ]
   },
   { path: '**', component: NotFoundComponent }
@@ -21,5 +30,6 @@ export const RoutedComponent = [
   HomeComponent,
   LoginComponent,
   CardapioComponent,
-  CardapioNewComponent
+  CardapioNewComponent,
+  CardapioListComponent
 ];

@@ -9,9 +9,5 @@ export class CardapioNewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const $ = window['$'];
-    $('#myModal').modal('show');
-    console.log('oi')
   }
-
 }
