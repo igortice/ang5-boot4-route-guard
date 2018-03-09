@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
-import { CardapioComponent } from './pages/cardapio/cardapio.component';
+import { RouterModule } from '@angular/router';
+import { LayoutComponent, LayoutDashboardComponent, LayoutMainComponent, LayoutNavbarComponent } from './layout';
+import { ROUTES } from './app-routing.config';
 
-const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'cardapios', component: CardapioComponent },
-  { path: '**', component: NotFoundComponent }
-];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes, { useHash: true }) ],
+  imports: [ RouterModule.forRoot(ROUTES, { useHash: true }) ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}
+
+export const LayoutCompoment = [
+  LayoutComponent,
+  LayoutNavbarComponent,
+  LayoutDashboardComponent,
+  LayoutMainComponent
+];
