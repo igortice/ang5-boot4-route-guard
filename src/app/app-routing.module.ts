@@ -6,14 +6,15 @@ import { LoginComponent } from './pages/login/login.component';
 import { CardapioComponent } from './pages/cardapio/cardapio.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cardapios', component: CardapioComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
+  imports: [ RouterModule.forRoot(routes, { useHash: true }) ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}
