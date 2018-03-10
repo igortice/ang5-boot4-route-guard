@@ -1,5 +1,6 @@
 import {
   CardapioComponent,
+  CardapioEditComponent,
   CardapioListComponent,
   CardapioNewComponent,
   HomeComponent,
@@ -18,6 +19,7 @@ export const ROUTES: Routes = [
     component: CardapioComponent,
     children:  [
       { path: '', component: CardapioListComponent },
+      { path: ':id/edit', component: CardapioEditComponent },
       { path: 'new', component: CardapioNewComponent }
     ]
   },
@@ -31,5 +33,6 @@ export const RoutedComponent = [
   LoginComponent,
   CardapioComponent,
   CardapioNewComponent,
-  CardapioListComponent
+  CardapioListComponent,
+  CardapioEditComponent
 ];
