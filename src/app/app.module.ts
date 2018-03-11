@@ -5,6 +5,7 @@ import { AppRoutingModule, LayoutCompoment } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { RoutedComponent } from './app-routing.config';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { RoutedComponent } from './app-routing.config';
   ],
   imports:      [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers:    [],
   bootstrap:    [ AppComponent ]

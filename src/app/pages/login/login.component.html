@@ -1,9 +1,26 @@
 <div class='card bg-light mb-3'>
   <div class='card-header'>login</div>
   <div class='card-body'>
-    <form>
-      <button class='btn btn-lg btn-primary btn-block'>entrar</button>
-      <button class='btn btn-lg btn-warning btn-block text-white'>sair</button>
+    <form [formGroup]='formLogin' (ngSubmit)='onSubmit()'>
+      <div class='form-group'>
+        <label for='inputEmail'>Email address</label>
+        <input type='email'
+               class='form-control'
+               placeholder='Enter email'
+               id='inputEmail'
+               name='email' formControlName='email'>
+        <small class='form-text text-muted'>Email Válido (<i class='fa fa-{{ formLogin.get("email").invalid ? "times" : "check" }}'></i>)</small>
+      </div>
+      <div class='form-group'>
+        <label for='inputPassword'>Password</label>
+        <input type='password'
+               class='form-control'
+               id='inputPassword'
+               placeholder='Password'
+               name='password' formControlName='password'>
+        <small class='form-text text-muted'>Password Válido (<i class='fa fa-{{ formLogin.get("password").invalid ? "times" : "check" }}'></i>)</small>
+      </div>
+      <button type='submit' class='btn btn-primary' [disabled]='formLogin.invalid'>Submit</button>
     </form>
   </div>
 </div>
